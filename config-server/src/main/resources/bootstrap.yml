@@ -1,0 +1,20 @@
+server:
+  port: 3012
+eureka:
+  client:
+    service-url:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://test:123456@localhost:3000/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: config-eureka-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/somepeopleHavingDream/config-only-a-demo.git
+          default-label: master
+          search-paths: config

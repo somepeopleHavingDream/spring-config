@@ -1,0 +1,3 @@
+/config-client/target/
+/config-eureka/target/
+/config-server/target/
